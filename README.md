@@ -1,10 +1,13 @@
+## build with buildpack
 ```sh
 
 export DOCKER_USER=arllanos
 
 pack build --builder=heroku/buildpacks:20 ${DOCKER_USER}/custom-model:v1
 
-
+```
+## deploy inference
+```sh
 cat << EOF > custom.yaml
 apiVersion: serving.kserve.io/v1beta1
 kind: InferenceService
@@ -15,8 +18,7 @@ spec:
     containers:
       - name: kserve-container
         image: ${DOCKER_USER}/custom-model:v1
-
-kubectl apply -f custom.yaml
 EOF
 
+kubectl apply -f custom.yaml
 ```
