@@ -1,9 +1,11 @@
-## build with buildpack
+## build with buildpack and push
 ```sh
 
 export DOCKER_USER=arllanos
 
 pack build --builder=heroku/buildpacks:20 ${DOCKER_USER}/custom-model:v1
+
+ docker push ${DOCKER_USER}/custom-model:v1
 
 ```
 ## deploy inference
