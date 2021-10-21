@@ -1,6 +1,11 @@
 # Custom predictor
 The following example is adapted from [KServe official doc](https://kserve.github.io/website/modelserving/v1beta1/custom/custom_model/)
 
+## Pre-requisites
+[Install KServe 0.7.0] https://kserve.github.io/website/admin/serverless/
+
+> ℹ️ **Or run the one liner installer from kubeflow-manifests as long as it as been already upgraded to v0.7.0**
+
 ## Write the Custom Model Server
 ### Prepare dev env
 ```sh
