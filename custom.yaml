@@ -6,6 +6,4 @@ spec:
   predictor:
     containers:
       - name: kserve-container
-        image: arllanos/custom-model:v1
-
-kubectl apply -f custom.yaml
+        image: /custom-model:v1
