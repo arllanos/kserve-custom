@@ -1,11 +1,20 @@
+## prepara dev env
+```sh
+virtualenv env
+source env/bin/activate
+
+pip3 install kserve
+
+# pip3 install ray[default]
+# pip3 install ray[serve] --no-cache-dir
+pip3 freeze > requirements.txt
+```
 ## build with buildpack and push
 ```sh
-
 export DOCKER_USER=arllanos
 
-pack build --builder=heroku/buildpacks:20 ${DOCKER_USER}/custom-model:v1
-
- docker push ${DOCKER_USER}/custom-model:v1
+pack build --builder=heroku/buildpacks:20 ${DOCKER_USER}/custom-model:v2
+docker push ${DOCKER_USER}/custom-model:v2
 
 ```
 ## deploy inference
