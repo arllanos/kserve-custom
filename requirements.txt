@@ -21,6 +21,7 @@ charset-normalizer==2.0.7
 click==8.0.3
 cloudevents==1.2.0
 colorama==0.4.4
+colorful==0.5.4
 configparser==5.0.2
 cryptography==3.4.7
 deprecation==2.1.0

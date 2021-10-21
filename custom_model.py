@@ -12,8 +12,9 @@ class AlexNetModel(kserve.KFModel):
     def load(self):
         pass
 
-    def predict(self, request: Dict) -> Dict:
-        pass
+    async def predict(self, request: Dict) -> Dict:
+        result = [1, 1]
+        return {"predictions": result}
 
 if __name__ == "__main__":
     kserve.KFServer().start({"custom-model": AlexNetModel})

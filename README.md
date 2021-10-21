@@ -13,6 +13,7 @@ virtualenv env
 source env/bin/activate
 
 pip3 install kserve
+pip install 'ray[default]'
 pip3 freeze > requirements.txt
 ```
 > ℹ️ **there is no need to install ray package separately**
