@@ -6,4 +6,4 @@ spec:
   predictor:
     containers:
       - name: kserve-container
-        image: /custom-model:v1
+        image: arllanos/custom-model:v2
